@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block sty %}
+
+.dict{
+    border-radius:20px;
+    width:600px;
+    height:250px;
+    background-color:black;
+    text-align:center;
+    margin:200px 430px;
+    box-shadow:8px 8px 12px black;
+    color:#93c572;
+    font-size:30px;
+
+
+    }
+.button{
+display:None;
+}
+.welcome{
+display:None;
+}
+.bg{
+margin-top:-220px;
+margin-left:680px;
+
+}
+
+
+
+
+
+
+
+{% endblock %}
+
+
+{% block content %}
+<div class="dict">
+<br>
+    {{ans}}
+
+</div>
+
+  <button class="bg" onclick="window.location.href='login'" >
+            <span class="fg" >Back</span>
+  </button>
+
+
+
+
+
+{% endblock %}

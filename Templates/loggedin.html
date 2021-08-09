@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block sty %}
+#movie{
+background-color:#f8f8ff;
+border-radius:10px;
+margin-top:100px;
+width:300px;
+height:500px;
+margin-bottom:200px;
+box-shadow:6px 6px 5px grey,-10px -10px 20px #93c572;
+}
+
+
+.fills{
+border-radius:10px;
+border:white;
+box-shadow: 6px 6px 5px grey;
+}
+
+#entermovie{
+padding-top:50px;
+}
+
+.pics{
+width:100px;
+height:100px;
+border-radius:50%;
+}
+
+
+
+
+
+
+
+
+{% endblock %}
+
+{% block content %}
+
+
+{{customer.name}}
+
+
+
+<div class="container" id="movie">
+
+
+<center>
+    <br>
+    <font size="5px">WEATHER FINDER</font><br><br><br>
+    <img src="{% static 'img/movie.jpg' %}" class="pics">
+    <form id="entermovie" action="movieforyou" method="POST">
+        {% csrf_token %}
+        Enter city<br><br>
+        <input type="text" class="fills" name="city"><br>
+        <br>
+        <input type="submit"  id="enter" value="Find a movie for me" class="fills" onmouseover="myfunc1()" onmouseleave="myfunc2()">
+    </form>
+</center>
+
+
+
+
+</div>
+
+<script>
+    function myfunc1() {
+        document.getElementById("enter").style.backgroundColor="#93c572";
+    }
+
+    function myfunc2() {
+        document.getElementById("enter").style.backgroundColor="white";
+    }
+
+
+</script>
+
+
+
+
+
+{% endblock %}
+

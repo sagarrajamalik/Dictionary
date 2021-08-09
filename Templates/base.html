@@ -1,0 +1,138 @@
+<html>
+{% load static %}
+<head>
+    <title>
+            {% block title %}
+        {% endblock %}
+
+    </title>
+    <link rel="stylesheet" href="{% static 'butt2.css' %}">
+
+</head>
+  <style>
+
+  #navbar{
+  background-color:#202020;
+
+  width:100%;
+  height:10px;
+
+  height:50px;
+  border-radius:6px;
+  font-size:20px;
+  text-shadow: 2px 2px #202020;
+  font-family:verdana,sans-serif;
+  float:center;
+
+
+
+  color:#93c572;
+
+
+
+  }
+  .button{
+  font-size:20px;
+  background-color:#202020;
+  border-color:#93c572;
+  border-radius:10px;
+  cursor:pointer;
+   color:#93c572;
+   float:right;
+ }
+
+ ul{
+ list-style-type:None;
+ font-size:20px;
+ margin:0;
+ padding:0;
+ }
+ li{
+ display:inline;
+ }
+ .navbar{
+ font-weight:bold;
+ width:200px;
+ color:white;
+
+
+
+
+ }
+ a{
+ color:#93c572;
+ text-decoration:None;
+
+ }
+
+
+
+
+
+
+
+  {% block sty %}
+
+  {% endblock %}
+  </style>
+
+
+
+
+    <body  id="body" style="background-color:#202020;">
+
+    <div class="container" id="navbar">
+        <a href="/">SAGARRAJAMALIK</a>
+        <span class="welcome" style="padding-left:400px;font-weight:bold;">Welcome to my portfolio!</span>
+
+    <button class="button" onmouseover="mode1()" onclick="window.location.href='login'" onmouseleave="mode2()"> Dictionary</button>
+
+
+    </div>
+
+
+
+
+
+{% block content %}
+
+
+
+
+
+{% endblock %}
+
+
+</body>
+<script>
+    function mode1(){
+    document.getElementsByClassName('button')[0].style.backgroundColor='#93c572';
+    document.getElementsByClassName('button')[0].style.color='#202020';
+
+
+    }
+    function mode2(){
+
+        document.getElementsByClassName('button')[0].style.backgroundColor='#202020';
+        document.getElementsByClassName('button')[0].style.color='#93c572';
+
+
+
+    }
+
+    function changemode(){
+    document.getElementById('body').style.backgroundColor="white";
+     document.getElementsByClassName('button')[0].style.backgroundColor='white';
+     document.getElementsByClassName('button')[0].style.color='#c62828';
+
+
+
+
+    }
+
+
+
+</script>
+
+
+</html>

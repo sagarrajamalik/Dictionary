@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block sty %}
+
+.dict{
+    border-radius:20px;
+    width:600px;
+    height:250px;
+    background-color:black;
+    text-align:center;
+    margin:200px 430px;
+    box-shadow:3px 3px 7px black;
+    color:#93c572;
+    font-size:30px;
+
+
+    }
+.blank{
+    height:50px;
+    margin-top:20px;
+    border-radius:20px;
+    border:0;
+    background-color:white;
+    font-size:20px;
+}
+.blank:active .blank{
+border:0;
+}
+.button{
+display:none;
+}
+.welcome{
+display:none;
+}
+
+
+
+
+{% endblock %}
+
+
+{% block content %}
+    <div class="dict">
+
+        <form action="movieforyou">
+            <br><input type="text" class="blank" name="word" placeholder="Type word to search...">
+
+        <br><br><br>
+        <button class="bg" style="margin-top:50px;">
+            <span class="fg">Search</span>
+        </button>
+        </form>
+
+
+    </div>
+
+
+
+
+{% endblock %}

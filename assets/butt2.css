@@ -1,0 +1,38 @@
+
+    .bg{
+    background-color:#74B14E;
+    border-radius:6px;
+    border:0;
+    width:100px;
+    height:54px;
+    cursor:pointer;
+    padding:0;
+
+
+
+
+    }
+
+
+
+
+
+    .fg{
+        display:block;
+        font-size:20px;
+        font-weight:bold;
+        background-color:#93C572;
+        color:white;
+        padding:13px 0px;
+        transform:translateY(-7px);
+        border-radius:6px;
+        font-family:OCR A Std, monospace;
+        border:1px solid #e53935;
+    }
+    .bg:active .fg{
+    transform:translateY(0px);
+    }
+
+    .bg:hover .fg{
+
+    color:black;}
